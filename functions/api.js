@@ -4,10 +4,10 @@ const path = require('path');
 const serverless = require('serverless-http');
 const app = express();
 const bodyParser = require('body-parser');
-const cors=require("cors");
+ const cors=require("cors");
 
 const router = express.Router();
-app.use(cors())
+ app.use(cors())
 router.get('/', (req, res) => {
   res.setHeader("Access-Control-Allow-Credential","true")
   res.writeHead(200, { 'Content-Type': 'text/html' });
